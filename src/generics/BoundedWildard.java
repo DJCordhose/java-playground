@@ -8,6 +8,7 @@ import java.util.List;
 
 public class BoundedWildard {
 
+    // generic algorithm that copies from random dest to src, but still type safe
     public static <T> void copy(List<? super T> dest, List<? extends T> src) {
         for (int i = 0; i < src.size(); i++)
             dest.set(i, src.get(i));
